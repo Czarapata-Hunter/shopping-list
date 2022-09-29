@@ -33,3 +33,9 @@ export async function signOutUser() {
 export async function createItem(item) {
     return await client.from('shopping_list').insert(item).single();
 }
+
+//Part B
+
+export async function getItems() {
+    return await client.from('shopping_list').select('*').order('created_at');
+}

@@ -46,20 +46,14 @@
             </section>
             <section class="right">
                 <form class="item-form" id="item-form">
-                    <label>
-                        Quantity:
-                        <input type="number" name="quantity" min="0" />
-                    </label>
-                    <label>
-                        Item:
-                        <input name="item" />
-                    </label>
+                    <input type="number" name="quantity" min="0" required placeholder="Quantity" />
+                    <input name="item" required placeholder="Item" />
                     <button>Add Item</button>
                 </form>
-                <ul class="list">
+                <ul id="item-list" class="item-list">
                     <!--Listed Items-->
                 </ul>
-                <button class="delete">Delete List</button>
+                <button id="delete" class="delete">Delete List</button>
                 <p id="error-display" class="error"></p>
             </section>
         </main>
