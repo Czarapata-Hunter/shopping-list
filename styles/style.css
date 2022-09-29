@@ -91,3 +91,8 @@ main {
 
     border-radius: 20px;
 }
+
+.bought {
+    text-decoration: line-through;
+    color: red;
+}
