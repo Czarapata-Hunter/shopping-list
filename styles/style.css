@@ -1,0 +1,41 @@
+.main-auth {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 20px;
+    gap: 20px;
+}
+
+.authentication form {
+    display: grid;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.authentication button {
+    height: 40px;
+    width: 100px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.top {
+    border-color: rgb(68, 139, 68);
+    border: 2px;
+    border-style: solid;
+
+    width: 500px;
+
+    border-radius: 20px;
+}
+
+.bottom {
+    border-color: rgb(68, 139, 68);
+    border: 2px;
+    border-style: solid;
+
+    width: 500px;
+
+    border-radius: 20px;
+}

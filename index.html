@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Supabase Web App</title>
+        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Supabase Web App</title>
-    <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+        <!-- css -->
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
+        <!-- add link for page specific css -->
+    </head>
 
+    <body>
+        <header class="page-header">
+            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
+            <p class="title">Grocery List</p>
+            <nav>
+                <a href="/">Home</a>
+                <a id="sign-out-link" href="auth">Sign Out</a>
+            </nav>
+        </header>
 
-    <!-- css -->
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/global.css" />
-    <!-- add link for page specific css -->
-
-</head>
-
-<body>
-    <header class="page-header">
-        <img class="logo" src="/assets/html_css_js.png" alt="logo">
-        <p class="title">Supabase Web App</p>
-        <nav>
-            <a href="/">Home</a>
-            <a id="sign-out-link" href="auth">Sign Out</a>
-        </nav>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main class="main-auth">
+            <div class="top">
+                <div class="authentication">
+                    <form id="sign-in">
+                        <h2>Returning Customer</h2>
+                        <label>Email </label>
+                        <input type="email" name="email" id="ret-cust-email" />
+                        <label>Password </label>
+                        <input type="password" name="password" id="ret-cust-pass" />
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="authentication">
+                    <form id="sign-up">
+                        <h2>New Customer</h2>
+                        <label>Email </label>
+                        <input type="email" name="email" id="new-cust-email" />
+                        <label>Password </label>
+                        <input type="password" name="password" id="new-cust-pass" />
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
