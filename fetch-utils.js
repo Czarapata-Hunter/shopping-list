@@ -28,3 +28,8 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+
+// Create Part A
+export async function createItem(item) {
+    return await client.from('shopping_list').insert(item).single();
+}
