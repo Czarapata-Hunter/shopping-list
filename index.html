@@ -39,31 +39,28 @@
             </nav>
         </header>
 
-        <main class="main-auth">
-            <div class="top">
-                <div class="authentication">
-                    <form id="sign-in">
-                        <h2>Returning Customer</h2>
-                        <label>Email </label>
-                        <input type="email" name="email" id="ret-cust-email" />
-                        <label>Password </label>
-                        <input type="password" name="password" id="ret-cust-pass" />
-                        <button>Submit</button>
-                    </form>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="authentication">
-                    <form id="sign-up">
-                        <h2>New Customer</h2>
-                        <label>Email </label>
-                        <input type="email" name="email" id="new-cust-email" />
-                        <label>Password </label>
-                        <input type="password" name="password" id="new-cust-pass" />
-                        <button>Submit</button>
-                    </form>
-                </div>
-            </div>
+        <main>
+            <section class="left">
+                <h3>Total Items Listed</h3>
+                <h1>10</h1>
+            </section>
+            <section class="right">
+                <form class="item-form">
+                    <label>
+                        Quantity:
+                        <input type="number" name="quantity" min="0" />
+                    </label>
+                    <label>
+                        Item:
+                        <input name="item" />
+                    </label>
+                    <button>Add Item</button>
+                </form>
+                <ul class="list">
+                    <!--Listed Items-->
+                </ul>
+                <button class="delete">Delete List</button>
+            </section>
         </main>
     </body>
 </html>
