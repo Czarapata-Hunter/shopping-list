@@ -95,4 +95,5 @@ main {
 .bought {
     text-decoration: line-through;
     color: red;
+    font-weight: bold;
 }
