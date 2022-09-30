@@ -57,7 +57,13 @@ deleteButton.addEventListener('click', async () => {
     if (error) {
         displayError();
     } else {
-        items = [];
+        const unBoughtItems = [];
+        for (const item of items) {
+            if (!item.bought) {
+                unBoughtItems.push(item);
+            }
+        }
+        items = unBoughtItems;
         displayItems();
     }
 });
