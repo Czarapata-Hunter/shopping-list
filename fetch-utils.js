@@ -34,6 +34,13 @@ export async function createItem(item) {
     return await client.from('shopping_list').insert(item).single();
 }
 
+// Part D
+export async function deleteAllItems() {
+    const user = getUser();
+
+    return await client.from('shopping_list').delete().eq('user_id', user.id);
+}
+
 //Part B
 
 export async function getItems() {
