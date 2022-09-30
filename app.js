@@ -1,7 +1,13 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import './auth/user.js';
-import { createItem, getItems, completeItem, deleteAllItems } from './fetch-utils.js';
+import {
+    createItem,
+    getItems,
+    completeItem,
+    deleteBoughtItems,
+    deleteAllItems,
+} from './fetch-utils.js';
 import { renderItem } from './render-utils.js';
 
 /* Get DOM Elements */
@@ -9,6 +15,7 @@ const itemForm = document.getElementById('item-form');
 const errorDisplay = document.getElementById('error-display');
 const itemList = document.getElementById('item-list');
 const deleteButton = document.getElementById('delete-button');
+const deleteAllButton = document.getElementById('delete-all-button');
 /* State */
 let error = null;
 let items = [];
@@ -51,7 +58,7 @@ itemForm.addEventListener('submit', async (e) => {
 });
 
 deleteButton.addEventListener('click', async () => {
-    const response = await deleteAllItems();
+    const response = await deleteBoughtItems();
     error = response.error;
 
     if (error) {
@@ -64,6 +71,18 @@ deleteButton.addEventListener('click', async () => {
             }
         }
         items = unBoughtItems;
+        displayItems();
+    }
+});
+
+deleteAllButton.addEventListener('click', async () => {
+    const response = await deleteAllItems();
+    error - response.error;
+
+    if (error) {
+        displayError();
+    } else {
+        items = [];
         displayItems();
     }
 });

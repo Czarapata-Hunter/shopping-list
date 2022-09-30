@@ -35,11 +35,16 @@ export async function createItem(item) {
 }
 
 // Part D
-export async function deleteAllItems() {
+export async function deleteBoughtItems() {
     // const user = getUser();
 
     return await client.from('shopping_list').delete().match({ bought: true });
     // .eq('user_id', user.id);
+}
+
+export async function deleteAllItems() {
+    const user = getUser();
+    return await client.from('shopping-list').delete().eq('user_id', user.id);
 }
 
 //Part B
