@@ -1,0 +1,99 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 100px;
+    margin: 20px;
+    gap: 20px;
+}
+
+.left {
+    border: 3px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(77, 131, 77);
+
+    margin: 25px;
+
+    height: 50%;
+    width: 95%;
+
+    text-align: center;
+}
+
+.left h3 {
+    font-size: 25px;
+    color: rgb(77, 131, 77);
+}
+
+.left h1 {
+    font-size: 100px;
+    color: rgb(77, 131, 77);
+}
+
+.right {
+    border: 3px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(77, 131, 77);
+
+    margin: 25px;
+    padding: 25px;
+
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.item-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item-form label {
+    width: 100%;
+    font-size: 20px;
+}
+
+.item-form input {
+    height: 25px;
+}
+
+.authentication form {
+    display: grid;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.authentication button {
+    height: 40px;
+    width: 100px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.top {
+    border-color: rgb(68, 139, 68);
+    border: 2px;
+    border-style: solid;
+
+    width: 500px;
+
+    border-radius: 20px;
+}
+
+.bottom {
+    border-color: rgb(68, 139, 68);
+    border: 2px;
+    border-style: solid;
+
+    width: 500px;
+
+    border-radius: 20px;
+}
+
+.bought {
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+}
